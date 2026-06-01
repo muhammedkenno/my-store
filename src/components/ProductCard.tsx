@@ -43,12 +43,12 @@ export default function ProductCard({ product }: Props) {
     <Link href={`/products/${product.slug}`}>
       <div className="bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.08)] rounded-2xl overflow-hidden hover:border-[rgba(201,168,76,0.35)] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
 
-        <div className="h-44 flex items-center justify-center bg-gradient-to-br from-[#1a1500] to-[#2d2200] relative">
+        <div className="h-44 md:h-56 lg:h-64 flex items-center justify-center bg-gradient-to-br from-[#1a1500] to-[#2d2200] relative">
           {product.image ? (
             <img
               src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${product.image.url}`}
               alt={product.name}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain object-center"
             />
           ) : (
             <span className="text-5xl">📦</span>

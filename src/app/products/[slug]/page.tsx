@@ -50,12 +50,12 @@ export default async function ProductPage({
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
 
-        <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a1500] to-[#2d2200] aspect-square flex items-center justify-center">
+        <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a1500] to-[#2d2200] aspect-[4/3] md:aspect-[3/2] lg:aspect-[16/9] flex items-center justify-center">
           {product.image ? (
             <img
               src={`${process.env.NEXT_PUBLIC_STRAPI_URL}${product.image.url}`}
               alt={product.name}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain object-center"
             />
           ) : (
             <span className="text-8xl">📦</span>
