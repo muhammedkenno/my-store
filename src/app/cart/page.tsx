@@ -14,7 +14,7 @@ export default function CartPage() {
 
   function handleCheckout() {
     const itemLines = items
-      .map((item) => `• ${item.name} x${item.quantity} — $${(item.price * item.quantity).toFixed(2)}`)
+      .map((item) => `• ${item.name} x${item.quantity} — ₺${(item.price * item.quantity).toFixed(2)}`)
       .join("\n")
 
     const message =
@@ -72,7 +72,7 @@ export default function CartPage() {
               <h2 className="font-display text-sm font-medium text-[#e8e8f0]">
                 {item.name}
               </h2>
-              <p className="text-[#c9a84c] text-sm mt-0.5">${item.price}</p>
+              <p className="text-[#c9a84c] text-sm mt-0.5">₺{item.price}</p>
             </div>
 
             {/* التحكم بالكمية */}
@@ -96,7 +96,7 @@ export default function CartPage() {
 
             {/* السعر الكلي */}
             <p className="text-sm font-medium text-[#c9a84c] w-16 text-right">
-              ${(item.price * item.quantity).toFixed(2)}
+              ₺{(item.price * item.quantity).toFixed(2)}
             </p>
 
             {/* حذف */}
@@ -115,7 +115,7 @@ export default function CartPage() {
 
         <div className="flex justify-between items-center mb-4">
           <span className="text-[rgba(232,232,240,0.5)] text-sm">{t.subtotal}</span>
-          <span className="text-sm">${totalPrice().toFixed(2)}</span>
+          <span className="text-sm">₺{totalPrice().toFixed(2)}</span>
         </div>
 
         <div className="flex justify-between items-center mb-6 pb-4 border-b border-[rgba(255,255,255,0.08)]">
@@ -126,7 +126,7 @@ export default function CartPage() {
         <div className="flex justify-between items-center mb-6">
           <span className="font-display font-medium">{t.total}</span>
           <span className="font-display text-xl font-bold text-[#c9a84c]">
-            ${totalPrice().toFixed(2)}
+            ₺{totalPrice().toFixed(2)}
           </span>
         </div>
 

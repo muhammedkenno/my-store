@@ -82,7 +82,7 @@ export default async function ProductPage({
           {/* السعر */}
           <div className="flex items-baseline gap-2 mb-8">
             <span className="font-display text-4xl font-bold text-[#c9a84c]">
-              ${product.price}
+              ₺{product.price}
             </span>
             <span className="text-[rgba(232,232,240,0.35)] text-sm">TL</span>
           </div>

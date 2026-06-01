@@ -62,7 +62,7 @@ export default function ProductCard({ product }: Props) {
 
           <div className="flex justify-between items-center">
             <span className="text-base font-medium text-[#c9a84c]">
-              ${product.price}
+              ₺{product.price}
             </span>
 
             <button
