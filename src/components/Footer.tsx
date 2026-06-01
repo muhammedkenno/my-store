@@ -92,7 +92,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* العمود 3 — السوشيال ميديا */}
         <div>
           <p className="font-display text-sm font-medium mb-4 text-[#c9a84c] uppercase tracking-wider">
             {c.followUs}
